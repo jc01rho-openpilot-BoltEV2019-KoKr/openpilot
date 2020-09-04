@@ -43,10 +43,17 @@ static void ui_draw_sidebar_battery_text(UIState *s) {
   const int battery_img_y = 273;
 
   char battery_str[7];
-  snprintf(battery_str, sizeof(battery_str), "%d%%%s", s->scene.batteryPercent, strcmp(s->scene.batteryStatus, "Charging") == 0 ? "+" : "-");
-  nvgFillColor(s->vg, COLOR_WHITE);
+//  snprintf(battery_str, sizeof(battery_str), "%d%%%s", s->scene.batteryPercent, strcmp(s->scene.batteryStatus, "Charging") == 0 ? "+" : "-");
+  snprintf(battery_str, sizeof(battery_str), "%d%%", s->scene.batteryPercent);
+  if(strcmp(s->scene.batteryStatus, "Charging") == 0) {
+     nvgFillColor(s->vg, COLOR_YELLOW);
+     nvgFontFaceId(s->vg, s->font_sans_bold);
+  } else {
+     nvgFillColor(s->vg, COLOR_WHITE);
+     nvgFontFaceId(s->vg, s->font_sans_regular);
+  }
   nvgFontSize(s->vg, 44);
-  nvgFontFaceId(s->vg, s->font_sans_regular);
+//  nvgFontFaceId(s->vg, s->font_sans_regular);
   nvgTextAlign(s->vg, NVG_ALIGN_CENTER | NVG_ALIGN_MIDDLE);
   nvgTextBox(s->vg, battery_img_x, battery_img_y, battery_img_w, battery_str, NULL);
 }
@@ -61,10 +68,10 @@ static void ui_draw_sidebar_network_type(UIState *s) {
   char wifiIpAddress_str[15];
   snprintf(wifiIpAddress_str, sizeof(wifiIpAddress_str), "%s", s->scene.wifiIpAddress);
   nvgFillColor(s->vg, COLOR_WHITE);
-  nvgFontSize(s->vg, 40);
+  nvgFontSize(s->vg, 38);
   nvgFontFaceId(s->vg, s->font_sans_regular);
-  nvgTextAlign(s->vg, NVG_ALIGN_LEFT | NVG_ALIGN_MIDDLE);
-  nvgTextBox(s->vg, network_x, network_y + 50, 250, wifiIpAddress_str, NULL);
+  nvgTextAlign(s->vg, NVG_ALIGN_CENTER | NVG_ALIGN_MIDDLE);
+  nvgTextBox(s->vg, network_x-20, network_y + 50, 250, wifiIpAddress_str, NULL);
 
   char network_type_str[32];
   if (s->scene.networkType <= 5) {

@@ -1018,7 +1018,7 @@ static void ui_draw_vision_header(UIState *s) {
   nvgRect(s->vg, ui_viz_rx, box_y, ui_viz_rw, header_h);
   nvgFill(s->vg);
 
-//  ui_draw_vision_maxspeed(s);
+  ui_draw_vision_maxspeed(s);
 
 #ifdef SHOW_SPEEDLIMIT
   ui_draw_vision_speedlimit(s);
@@ -1489,7 +1489,7 @@ static void bb_ui_draw_L_Extra(UIState *s)
 
     ///////////
     // LQR
-
+/*
     snprintf(str, sizeof(str), "I: %.3f", scene->lqr_i);
     ui_draw_text(s->vg, text_x, y, str, 25 * 2.5, COLOR_WHITE_ALPHA(200), s->font_sans_regular);
 
@@ -1516,7 +1516,7 @@ static void bb_ui_draw_L_Extra(UIState *s)
     y += height;
     snprintf(str, sizeof(str), "sR-CP: %.3f", scene->cp_steerRatio);
     ui_draw_text(s->vg, text_x, y, str, 25 * 2.5, COLOR_WHITE_ALPHA(200), s->font_sans_regular);
-
+*/
 }
 
 
@@ -1865,11 +1865,14 @@ void ui_nvg_init(UIState *s) {
 
   s->font_courbd = nvgCreateFont(s->vg, "courbd", "../assets/fonts/courbd.ttf");
   assert(s->font_courbd >= 0);
-  s->font_sans_regular = nvgCreateFont(s->vg, "sans-regular", "../assets/fonts/opensans_regular.ttf");
+//  s->font_sans_regular = nvgCreateFont(s->vg, "sans-regular", "../assets/fonts/opensans_regular.ttf");
+  s->font_sans_regular = nvgCreateFont(s->vg, "sans-regular", "../assets/fonts/NanumGothic.ttf");
   assert(s->font_sans_regular >= 0);
-  s->font_sans_semibold = nvgCreateFont(s->vg, "sans-semibold", "../assets/fonts/opensans_semibold.ttf");
+//  s->font_sans_semibold = nvgCreateFont(s->vg, "sans-semibold", "../assets/fonts/opensans_semibold.ttf");
+  s->font_sans_semibold = nvgCreateFont(s->vg, "sans-semibold", "../assets/fonts/NanumGothicBold.ttf");
   assert(s->font_sans_semibold >= 0);
-  s->font_sans_bold = nvgCreateFont(s->vg, "sans-bold", "../assets/fonts/opensans_bold.ttf");
+//  s->font_sans_bold = nvgCreateFont(s->vg, "sans-bold", "../assets/fonts/opensans_bold.ttf");
+  s->font_sans_bold = nvgCreateFont(s->vg, "sans-bold", "../assets/fonts/NanumGothicExtraBold.ttf");
   assert(s->font_sans_bold >= 0);
 
   s->img_wheel = nvgCreateImage(s->vg, "../assets/img_chffr_wheel.png", 1);

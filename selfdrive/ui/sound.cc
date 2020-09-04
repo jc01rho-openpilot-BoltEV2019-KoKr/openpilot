@@ -35,6 +35,24 @@ sound_file sound_table[] = {
   { cereal_CarControl_HUDControl_AudibleAlert_chimeWarningRepeat, "../assets/sounds/warning_repeat.wav", true },
   { cereal_CarControl_HUDControl_AudibleAlert_chimeError, "../assets/sounds/error.wav", false },
   { cereal_CarControl_HUDControl_AudibleAlert_chimePrompt, "../assets/sounds/error.wav", false },
+//
+  { cereal_CarControl_HUDControl_AudibleAlert_chimeGeard, "../assets/sounds/geard.wav", false },
+  { cereal_CarControl_HUDControl_AudibleAlert_chimeAlca, "../assets/sounds/alca.wav", false },
+  { cereal_CarControl_HUDControl_AudibleAlert_chimeSeatbelt, "../assets/sounds/seatbelt.wav", false },
+  { cereal_CarControl_HUDControl_AudibleAlert_chimeVision, "../assets/sounds/vision.wav", false },
+  { cereal_CarControl_HUDControl_AudibleAlert_chimeDistracted, "../assets/sounds/distracted.wav", true },
+  { cereal_CarControl_HUDControl_AudibleAlert_chimeCalibration1, "../assets/sounds/calibration1.wav", false },
+  { cereal_CarControl_HUDControl_AudibleAlert_chimeCalibration2, "../assets/sounds/calibration2.wav", false },
+//
+  { cereal_CarControl_HUDControl_AudibleAlert_chimeReady, "../assets/sounds/ready.wav", false }, 
+  { cereal_CarControl_HUDControl_AudibleAlert_chimeDoorOpen, "../assets/sounds/dooropen.wav", false }, 
+  { cereal_CarControl_HUDControl_AudibleAlert_chimeGearDrive, "../assets/sounds/geardrive.wav", false },
+  { cereal_CarControl_HUDControl_AudibleAlert_chimeLaneChange, "../assets/sounds/lanechange.wav", false },
+  { cereal_CarControl_HUDControl_AudibleAlert_chimeLaneDeparture, "../assets/sounds/lanedeparture.wav", false },
+  { cereal_CarControl_HUDControl_AudibleAlert_chimeRoadWarning, "../assets/sounds/roadwarning.wav", false },
+  { cereal_CarControl_HUDControl_AudibleAlert_chimeSeatBelt, "../assets/sounds/seatbelt.wav", false },
+  { cereal_CarControl_HUDControl_AudibleAlert_chimeViewUncertain, "../assets/sounds/viewuncertain.wav", false },
+//
   { cereal_CarControl_HUDControl_AudibleAlert_none, NULL, false },
 };
 

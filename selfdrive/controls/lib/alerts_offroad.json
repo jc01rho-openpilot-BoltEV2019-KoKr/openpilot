@@ -1,31 +1,31 @@
 {
   "Offroad_ChargeDisabled": {
-    "text": "EON charging disabled after car being off for more than 30 hours. Turn ignition on to start charging again.",
+    "text": "차량의 시동이 하루이상(30시간) 꺼져있으면 EON 충전이 불가능합니다. => 시동을 켜서 충전을 다시 시작하십시오!!!",	
     "severity": 0
   },
   "Offroad_TemperatureTooHigh": {
-    "text": "Device temperature too high. System won't start.",
+    "text": "EON 온도가 너무 높아서 시스템이 시작되지 않습니다.!!!",
     "severity": 1
   },
   "Offroad_ConnectivityNeededPrompt": {
-    "text": "Immediately connect to the internet to check for updates. If you do not connect to the internet, openpilot won't engage in ",
+    "text": "즉시 인터넷에 연결하여 업데이트를 확인하세요. 그렇지 않으면 오픈파일럿이 활성화되지 않습니다!!!",
     "severity": 0,
     "_comment": "Append the number of days at the end of the text"
   },
   "Offroad_ConnectivityNeeded": {
-    "text": "Connect to internet to check for updates. openpilot won't engage until it connects to internet to check for updates.",
+    "text": "인터넷에 연결하여 업데이트를 확인하세요. 그렇지 않으면 오픈파일럿이 활성화되지 않습니다!!!",
     "severity": 1
   },
   "Offroad_PandaFirmwareMismatch": {
-    "text": "Unexpected panda firmware version. System won't start. Reboot your device to reflash panda.",
+    "text": "호환되지않는 Panda 펌웨어 버전입니다. Panda 펌웨어 리플래시후 EON을 재부팅하세요!!!",
     "severity": 1
   },
   "Offroad_InvalidTime": {
-    "text": "Invalid date and time settings, system won't start. Connect to internet to set time.",
+    "text": "잘못된 날짜 및 시간설정으로 시스템이 시작되지 않습니다. 인터넷에 연결하여 날짜 및 시간을 재설정하십시오!!!",
     "severity": 1
   },
   "Offroad_IsTakingSnapshot": {
-    "text": "Taking camera snapshots. System won't start until finished.",
+    "text": "카메라 스냅샷 촬영이 완료되지않아 시스템이 시작되지 않습니다!!!",
     "severity": 0
   }
 }
