@@ -83,7 +83,7 @@ const int home_btn_w = 180;
 const int home_btn_x = 60;
 const int home_btn_y = vwp_h - home_btn_h - 40;
 
-const int UI_FREQ = 30;   // Hz
+const int UI_FREQ = 20; //30;   // Hz
 
 const int MODEL_PATH_MAX_VERTICES_CNT = 98;
 const int MODEL_LANE_PATH_CNT = 3;
@@ -129,6 +129,9 @@ typedef struct UIScene {
   bool brakePressed;
   bool regenPressed;
 
+  bool leftBlinker;
+  bool rightBlinker;
+  int blinker_blinkingrate;
 
   float curvature;
   int engaged;
